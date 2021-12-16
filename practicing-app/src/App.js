@@ -2,6 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import { Counter } from "./features/counter/Counter";
 import Comp1 from "./components/Comp1";
+import Comp2 from "./components/Comp2";
 import "./App.css";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Comp1 />
+        <Comp2 />
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
         <p>
