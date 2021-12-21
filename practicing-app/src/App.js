@@ -4,6 +4,7 @@ import { Counter } from "./features/counter/Counter";
 import Comp1 from "./components/Comp1";
 import Comp2 from "./components/Comp2";
 import "./App.css";
+import Comp3 from "./components/Comp3";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <header className="App-header">
         <Comp1 />
         <Comp2 />
+        <Comp3 />
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
         <p>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function Comp2() {
+function Comp3() {
   const [seconds, setSeconds] = useState(10);
   const [isActive, setIsActive] = useState(false);
 
@@ -26,7 +26,7 @@ function Comp2() {
   }, [isActive, seconds]);
   return (
     <>
-      <h2>This is comp2</h2>
+      <h2>This is comp3</h2>
       <div>this is the timer: {seconds}</div>
       <button
         onClick={() => {
@@ -39,4 +39,4 @@ function Comp2() {
   );
 }
 
-export default Comp2;
+export default Comp3;
