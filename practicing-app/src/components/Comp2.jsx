@@ -1,40 +1,19 @@
 import React, { useState, useEffect } from "react";
 
 function Comp2() {
-  const [seconds, setSeconds] = useState(10);
-  const [isActive, setIsActive] = useState(false);
-
-  //   function toggle() {
-  //     setIsActive(!isActive);
-  //   }
-
-  //   function reset() {
-  //     setSeconds(0);
-  //     setIsActive(false);
-  //   }
+  const [time, setTime] = useState(10);
 
   useEffect(() => {
-    let interval = null;
-    if (isActive) {
-      interval = setTimeout(() => {
-        setSeconds((seconds) => seconds - 1);
+    let timer;
+    if (time !== 0)
+      timer = setTimeout(() => {
+        setTime((time) => time - 1);
       }, 1000);
-    } else if (!isActive && seconds !== 0) {
-      clearInterval(interval);
-    }
-    return () => clearInterval(interval);
-  }, [isActive, seconds]);
+  }, [time]);
   return (
     <>
       <h2>This is comp2</h2>
-      <div>this is the timer: {seconds}</div>
-      <button
-        onClick={() => {
-          return isActive ? setIsActive(false) : setIsActive(true);
-        }}
-      >
-        Start/Stop Timer
-      </button>
+      <div>this is the timer: {time}</div>
     </>
   );
 }
