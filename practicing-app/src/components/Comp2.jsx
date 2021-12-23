@@ -4,9 +4,8 @@ function Comp2() {
   const [time, setTime] = useState(10);
 
   useEffect(() => {
-    let timer;
     if (time !== 0)
-      timer = setTimeout(() => {
+      setTimeout(() => {
         setTime((time) => time - 1);
       }, 1000);
   }, [time]);
