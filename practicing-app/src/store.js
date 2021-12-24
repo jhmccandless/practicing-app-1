@@ -1,4 +1,4 @@
-import { createStore } from "@reduxjs/toolkit";
+import { createStore } from "redux";
 import timers_reducer from "./reducer";
 
 const store = createStore(timers_reducer);

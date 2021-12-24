@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from "react";
+import { deactivateTimerAction } from "../action";
+// import { testingReducerAction } from "../action";
 
-function Comp2UI({ hangTime }) {
-  console.log(hangTime);
-  const startTime = 3;
-  const [time, setTime] = useState(startTime);
-  const [isRunning, setIsRunning] = useState(true);
+function Comp2UI({ hangTime, isHangActive }) {
+  const [time, setTime] = useState(hangTime);
+  // const [isRunning, setIsRunning] = useState(true);
+  deactivateTimerAction();
   useEffect(() => {
-    console.log(isRunning);
+    console.log(isHangActive);
     if (time <= 0) {
-      setIsRunning(false);
-    } else if (isRunning)
+    } else if (isHangActive)
       setTimeout(() => {
         setTime((time) => time - 1);
       }, 1000);
-  }, [time, isRunning]);
+  }, [time, isHangActive]);
   return (
     <>
       <h2>This is comp2</h2>
-      <div>this is the timer: {isRunning ? time : startTime}</div>
+      <div>this is the timer: {isHangActive ? time : hangTime}</div>
     </>
   );
 }
