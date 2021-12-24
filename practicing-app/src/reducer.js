@@ -4,17 +4,12 @@ const initialState = {
 };
 
 function timers_reducer(state = initialState, action) {
-  console.log(action.type);
+  console.log(action);
   switch (action.type) {
     case "DEACTIVATE_TIMER":
       return {
         ...state,
         isHangActive: false,
-      };
-    case "TESTING_REDUCER":
-      console.log("in case");
-      return {
-        ...state,
       };
     default:
       console.log("in default");

@@ -1,7 +1,6 @@
 import Comp2UI from "../components/Comp2UI";
 import { connect } from "react-redux";
-import { deactivateTimerAction } from "../action.js";
-// import { testingReducerAction } from "../action";
+import { deactivateTimerAction, testingAction } from "../action.js";
 
 function mapStateToProps(state) {
   console.log(state);
@@ -10,8 +9,11 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    deactivateTimer: function (data) {
-      dispatch(deactivateTimerAction(data));
+    deactivateTimer: function () {
+      dispatch(deactivateTimerAction());
+    },
+    testing: function (data) {
+      dispatch(testingAction(data));
     },
   };
 }
