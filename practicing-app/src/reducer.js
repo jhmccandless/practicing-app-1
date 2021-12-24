@@ -11,6 +11,10 @@ function timers_reducer(state = initialState, action) {
         ...state,
         isHangActive: false,
       };
+    case "TESTING_ACTION":
+      return {
+        ...state,
+      };
     default:
       console.log("in default");
       return state;

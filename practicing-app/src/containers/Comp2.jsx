@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { deactivateTimerAction, testingAction } from "../action.js";
 
 function mapStateToProps(state) {
-  console.log(state);
   return { hangTime: state.hangTime, isHangActive: state.isHangActive };
 }
 

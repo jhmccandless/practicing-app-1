@@ -6,7 +6,7 @@ export function deactivateTimerAction() {
 }
 
 export function testingAction(data) {
-  console.log("testingaction");
+  console.log("testingaction", data);
   return {
     type: "TESTING_ACTION",
     data,

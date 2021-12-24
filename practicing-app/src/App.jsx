@@ -2,7 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import { Provider } from "react-redux";
 import store from "./store";
-import Comp1 from "./components/Comp1";
+import Comp1 from "./containers/Comp1";
 import Comp2 from "./containers/Comp2";
 import "./App.css";
 import Comp3 from "./components/Comp3";

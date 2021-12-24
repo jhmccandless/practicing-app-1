@@ -5,16 +5,14 @@ function Comp2UI({ hangTime, isHangActive }) {
   const [time, setTime] = useState(hangTime);
   // const [isRunning, setIsRunning] = useState(true);
   useEffect(() => {
-    console.log(isHangActive);
     if (time <= 0) {
-      deactivateTimerAction();
+      // deactivateTimerAction();
     } else if (isHangActive)
       setTimeout(() => {
         setTime((time) => time - 1);
       }, 1000);
   }, [time, isHangActive]);
 
-  testingAction(56, "trying");
   return (
     <>
       <h2>This is comp2</h2>
