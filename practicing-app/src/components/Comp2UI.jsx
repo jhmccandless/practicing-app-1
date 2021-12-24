@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-function Comp2() {
+function Comp2UI({ hangTime }) {
+  console.log(hangTime);
   const startTime = 3;
   const [time, setTime] = useState(startTime);
   const [isRunning, setIsRunning] = useState(true);
@@ -21,4 +22,4 @@ function Comp2() {
   );
 }
 
-export default Comp2;
+export default Comp2UI;
