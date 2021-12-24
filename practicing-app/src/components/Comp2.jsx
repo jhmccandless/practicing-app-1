@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 
 function Comp2() {
-  const [time, setTime] = useState(3);
+  const startTime = 3;
+  const [time, setTime] = useState(startTime);
   const [isRunning, setIsRunning] = useState(true);
   useEffect(() => {
+    console.log(isRunning);
     if (time <= 0) {
       setIsRunning(false);
     } else if (isRunning)
@@ -14,7 +16,7 @@ function Comp2() {
   return (
     <>
       <h2>This is comp2</h2>
-      <div>this is the timer: {time}</div>
+      <div>this is the timer: {isRunning ? time : startTime}</div>
     </>
   );
 }
