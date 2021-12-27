@@ -5,7 +5,7 @@ import store from "./store";
 import Comp1 from "./containers/Comp1";
 import Comp2 from "./containers/Comp2";
 import "./App.css";
-import Comp3 from "./components/Comp3";
+import Comp3 from "./containers/Comp3";
 
 function App() {
   return (

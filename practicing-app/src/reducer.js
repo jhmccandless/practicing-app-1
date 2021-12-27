@@ -1,22 +1,20 @@
 const initialState = {
   isHangActive: true,
   hangTime: 2,
+  isRestActive: true,
+  restTime: 4,
 };
 
 function timers_reducer(state = initialState, action) {
   console.log(action);
+  console.log(state);
   switch (action.type) {
-    case "DEACTIVATE_TIMER":
+    case "RESET_TIMER":
       return {
         ...state,
         isHangActive: false,
       };
-    case "TESTING_ACTION":
-      return {
-        ...state,
-      };
     default:
-      console.log("in default");
       return state;
   }
 }

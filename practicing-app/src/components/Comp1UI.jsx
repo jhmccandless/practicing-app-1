@@ -1,20 +1,10 @@
 import React from "react";
 
-function Comp1UI({ testing }) {
-  function handleClick() {
-    console.log("inside click");
-    testing();
-  }
+function Comp1UI() {
   return (
     <>
       <h1>This is a comp!</h1>
-      <button
-        onClick={() => {
-          handleClick();
-        }}
-      >
-        Add one
-      </button>
+      <button>Add one</button>
     </>
   );
 }

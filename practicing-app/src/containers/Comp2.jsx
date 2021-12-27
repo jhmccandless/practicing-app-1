@@ -1,6 +1,6 @@
 import Comp2UI from "../components/Comp2UI";
 import { connect } from "react-redux";
-import { deactivateTimerAction, testingAction } from "../action.js";
+import { resetTimerAction } from "../action.js";
 
 function mapStateToProps(state) {
   return { hangTime: state.hangTime, isHangActive: state.isHangActive };
@@ -8,11 +8,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    deactivateTimer: function () {
-      dispatch(deactivateTimerAction());
-    },
-    testing: function (data) {
-      dispatch(testingAction(data));
+    resetTimer: function () {
+      dispatch(resetTimerAction());
     },
   };
 }

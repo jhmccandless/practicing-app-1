@@ -1,14 +1,6 @@
-export function deactivateTimerAction() {
-  console.log("in deact action");
+export function resetTimerAction() {
+  // console.log("in deact action");
   return {
-    type: "DEACTIVATE_TIMER",
-  };
-}
-
-export function testingAction(data) {
-  console.log("testingaction", data);
-  return {
-    type: "TESTING_ACTION",
-    data,
+    type: "RESET_TIMER",
   };
 }
