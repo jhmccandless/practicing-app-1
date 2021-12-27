@@ -1,6 +1,12 @@
-export function resetTimerAction() {
-  // console.log("in deact action");
+export function resetRestTimerAction(data) {
   return {
-    type: "RESET_TIMER",
+    type: "RESET_REST_TIMER",
+    data,
+  };
+}
+export function resetHangTimerAction(data) {
+  return {
+    type: "RESET_HANG_TIMER",
+    data,
   };
 }

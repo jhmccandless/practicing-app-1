@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Comp3UI from "../components/Comp3UI";
-import { resetTimerAction } from "../action";
+import { resetRestTimerAction } from "../action";
 
 function mapStateToProps(state) {
   return {
@@ -12,8 +12,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    resetTimer: function () {
-      dispatch(resetTimerAction());
+    resetRestTimer: function (data) {
+      dispatch(resetRestTimerAction(data));
     },
   };
 }

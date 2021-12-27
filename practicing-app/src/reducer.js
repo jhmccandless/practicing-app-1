@@ -9,10 +9,15 @@ function timers_reducer(state = initialState, action) {
   console.log(action);
   console.log(state);
   switch (action.type) {
-    case "RESET_TIMER":
+    case "RESET_REST_TIMER":
       return {
         ...state,
-        isHangActive: false,
+        isRestActive: true ? false : true,
+      };
+    case "RESET_HANG_TIMER":
+      return {
+        ...state,
+        isHangActive: true ? false : true,
       };
     default:
       return state;
