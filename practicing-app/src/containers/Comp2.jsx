@@ -6,8 +6,7 @@ function mapStateToProps(state) {
   return {
     hangTime: state.hangTime,
     restingTime: state.restTime,
-    setTotalTime: state.totalSetTime,
-    betweenSets: state.setRestTime,
+    totalTime: state.totalTime,
   };
 }
 
