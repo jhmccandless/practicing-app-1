@@ -3,7 +3,11 @@ import { connect } from "react-redux";
 import { resetHangTimerAction } from "../action.js";
 
 function mapStateToProps(state) {
-  return { hangTime: state.hangTime, restingTime: state.restTime };
+  return {
+    hangTime: state.hangTime,
+    restingTime: state.restTime,
+    totalTime: state.totalTime,
+  };
 }
 
 function mapDispatchToProps(dispatch) {
