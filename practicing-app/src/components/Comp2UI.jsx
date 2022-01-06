@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 function Comp2UI({ hangTime, restingTime, isHangActive }) {
-  console.log(isHangActive);
   const [workTime, setWorkTime] = useState(hangTime);
   const [isWorkActive, setIsWorkActive] = useState(true);
   const [restTime, setRestTime] = useState(restingTime);
@@ -25,6 +24,11 @@ function Comp2UI({ hangTime, restingTime, isHangActive }) {
           setWorkTime((workTime) => workTime - 1);
         }, 1000);
       }
+    } else if (!isHangActive) {
+      setIsWorkActive(true);
+      setIsRestActive(false);
+      setRestTime(restingTime);
+      setWorkTime(hangTime);
     }
   }, [
     workTime,

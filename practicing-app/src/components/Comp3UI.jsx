@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 
-function Comp3UI({ totalTime, isRestActive, isHangActive, resetRestTimer }) {
+function Comp3UI({ totalTime, isRestActive, isHangActive, resetHangTimer }) {
+  console.log(`is hang active? ${isHangActive}`);
+
   const [allTime, setAllTime] = useState(totalTime);
   useEffect(() => {
     if (allTime <= 0) {
-      resetRestTimer();
+      setAllTime(totalTime);
+      resetHangTimer();
     } else if (isHangActive) {
       setTimeout(() => {
         setAllTime((allTime) => {
@@ -12,7 +15,7 @@ function Comp3UI({ totalTime, isRestActive, isHangActive, resetRestTimer }) {
         });
       }, 1000);
     }
-  }, [allTime, isHangActive, resetRestTimer]);
+  }, [allTime, isHangActive, resetHangTimer, totalTime]);
   return (
     <>
       <h2>This is comp3UI</h2>
