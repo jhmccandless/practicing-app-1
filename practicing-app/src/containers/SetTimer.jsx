@@ -4,9 +4,7 @@ import { resetHangTimerAction } from "../action";
 
 function mapStateToProps(state) {
   return {
-    restTime: state.restTime,
     totalTime: state.totalTime,
-    isRestActive: state.isRestActive,
     isHangActive: state.isHangActive,
   };
 }

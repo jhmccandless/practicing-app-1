@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 function RestTimerUI({
-  resetRestTimer,
   restTime,
   isRestActive,
   setsTotal,
+  resetRestTimer,
   stopCircuit,
 }) {
   const [restingTime, setRestingTime] = useState(restTime);
@@ -21,7 +21,14 @@ function RestTimerUI({
         });
       }, 1000);
     }
-  }, [restTime, restingTime, isRestActive, resetRestTimer]);
+  }, [
+    restingTime,
+    restTime,
+    isRestActive,
+    resetRestTimer,
+    setsTotal,
+    stopCircuit,
+  ]);
   return (
     <>
       <h2>this is the rest timer</h2>
