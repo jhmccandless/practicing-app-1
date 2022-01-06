@@ -1,9 +1,10 @@
-import Comp2UI from "../components/Comp2UI";
+import HangUpUI from "../components/HangUpUI";
 import { connect } from "react-redux";
 import { resetHangTimerAction } from "../action.js";
 
 function mapStateToProps(state) {
   return {
+    downTime: state.downTime,
     hangTime: state.hangTime,
     restingTime: state.restTime,
     isHangActive: state.isHangActive,
@@ -18,6 +19,9 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-const connectedComp2 = connect(mapStateToProps, mapDispatchToProps)(Comp2UI);
+const connectedHangUpUI = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(HangUpUI);
 
-export default connectedComp2;
+export default connectedHangUpUI;

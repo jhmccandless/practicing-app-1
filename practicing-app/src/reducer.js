@@ -1,15 +1,16 @@
 const initialState = {
-  isHangActive: true,
-  hangTime: 2,
+  isHangActive: false,
   isRestActive: false,
-  restTime: 2,
-  totalTime: 4,
+  totalTime: 60,
+  hangTime: 7,
+  downTime: 3,
+  restTime: 180,
   setsTotal: 3,
 };
 
 function timers_reducer(state = initialState, action) {
   console.log(action);
-  console.table(state);
+  //   console.table(state);
   switch (action.type) {
     case "RESET_REST_TIMER":
       return {

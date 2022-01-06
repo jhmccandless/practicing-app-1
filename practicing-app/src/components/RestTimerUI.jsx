@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-function Comp1UI({
+function RestTimerUI({
   resetRestTimer,
   restTime,
   isRestActive,
   setsTotal,
   stopCircuit,
 }) {
-  console.log(`is rest active? ${isRestActive}`);
   const [restingTime, setRestingTime] = useState(restTime);
   useEffect(() => {
     if (setsTotal <= 0) {
@@ -25,10 +24,10 @@ function Comp1UI({
   }, [restTime, restingTime, isRestActive, resetRestTimer]);
   return (
     <>
-      <h1>This is a comp!</h1>
+      <h2>this is the rest timer</h2>
       <div>this is the rest timer: {restingTime} </div>
     </>
   );
 }
 
-export default Comp1UI;
+export default RestTimerUI;

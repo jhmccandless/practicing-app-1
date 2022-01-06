@@ -1,4 +1,4 @@
-import Comp1UI from "../components/Comp1UI";
+import RestTimerUI from "../components/RestTimerUI";
 import { connect } from "react-redux";
 import { resetRestTimerAction, stopCircuitAction } from "../action";
 
@@ -23,4 +23,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Comp1UI);
+export default connect(mapStateToProps, mapDispatchToProps)(RestTimerUI);

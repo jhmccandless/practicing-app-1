@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import Comp3UI from "../components/Comp3UI";
+import SetTimerUI from "../components/SetTimerUI";
 import { resetHangTimerAction } from "../action";
 
 function mapStateToProps(state) {
@@ -19,6 +19,9 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-const connectedComp3 = connect(mapStateToProps, mapDispatchToProps)(Comp3UI);
+const connectedSetTimerUI = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SetTimerUI);
 
-export default connectedComp3;
+export default connectedSetTimerUI;

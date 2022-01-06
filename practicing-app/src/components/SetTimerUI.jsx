@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function Comp3UI({ totalTime, isRestActive, isHangActive, resetHangTimer }) {
-  console.log(`is hang active? ${isHangActive}`);
-
+function SetTimerUI({ totalTime, isHangActive, resetHangTimer }) {
   const [allTime, setAllTime] = useState(totalTime);
   useEffect(() => {
     if (allTime <= 0) {
@@ -18,10 +16,10 @@ function Comp3UI({ totalTime, isRestActive, isHangActive, resetHangTimer }) {
   }, [allTime, isHangActive, resetHangTimer, totalTime]);
   return (
     <>
-      <h2>This is comp3UI</h2>
+      <h2>This is the set timer</h2>
       <div>this is the timer: {allTime}</div>
     </>
   );
 }
 
-export default Comp3UI;
+export default SetTimerUI;
