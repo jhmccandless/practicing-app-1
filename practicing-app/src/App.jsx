@@ -13,8 +13,8 @@ function App() {
       <div className="App">
         <header className="App-header">
           <Comp1 />
-          <Comp2 />
           <Comp3 />
+          <Comp2 />
           <img src={logo} className="App-logo" alt="logo" />
         </header>
       </div>

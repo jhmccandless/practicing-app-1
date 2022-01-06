@@ -13,6 +13,7 @@ function timers_reducer(state = initialState, action) {
     case "RESET_REST_TIMER":
       return {
         ...state,
+        isHangActive: false,
       };
     case "RESET_HANG_TIMER":
       console.log(state.isHangActive);

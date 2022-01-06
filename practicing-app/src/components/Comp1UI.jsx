@@ -4,7 +4,7 @@ function Comp1UI() {
   return (
     <>
       <h1>This is a comp!</h1>
-      <button>Add one</button>
+      <div>this is the rest timer: </div>
     </>
   );
 }
