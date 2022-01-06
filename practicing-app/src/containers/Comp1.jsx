@@ -1,6 +1,6 @@
 import Comp1UI from "../components/Comp1UI";
 import { connect } from "react-redux";
-import { resetRestTimerAction } from "../action";
+import { resetRestTimerAction, stopCircuitAction } from "../action";
 
 function mapStateToProps(state) {
   return {
@@ -8,6 +8,7 @@ function mapStateToProps(state) {
     totalTime: state.totalTime,
     isRestActive: state.isRestActive,
     isHangActive: state.isHangActive,
+    setsTotal: state.setsTotal,
   };
 }
 
@@ -15,6 +16,9 @@ function mapDispatchToProps(dispatch) {
   return {
     resetRestTimer: function (data) {
       dispatch(resetRestTimerAction(data));
+    },
+    stopCircuit: function (data) {
+      dispatch(stopCircuitAction(data));
     },
   };
 }

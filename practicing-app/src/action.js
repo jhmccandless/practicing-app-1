@@ -12,3 +12,9 @@ export function resetHangTimerAction(data) {
     data,
   };
 }
+
+export function stopCircuitAction() {
+  return {
+    type: "STOP_CIRCUIT",
+  };
+}

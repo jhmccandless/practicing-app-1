@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from "react";
 
-function Comp1UI({ resetRestTimer, restTime, isRestActive }) {
+function Comp1UI({
+  resetRestTimer,
+  restTime,
+  isRestActive,
+  setsTotal,
+  stopCircuit,
+}) {
   console.log(`is rest active? ${isRestActive}`);
   const [restingTime, setRestingTime] = useState(restTime);
-
   useEffect(() => {
-    if (restingTime <= 0) {
+    if (setsTotal <= 0) {
+      stopCircuit();
+    } else if (restingTime <= 0) {
       setRestingTime(restTime);
       resetRestTimer();
     } else if (isRestActive) {
