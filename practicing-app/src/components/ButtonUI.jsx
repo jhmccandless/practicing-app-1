@@ -1,9 +1,9 @@
 import React from "react";
 
-function ButtonUI({}) {
+function ButtonUI({ handleDesiredClick, name }) {
   return (
     <>
-      <button>Click Me</button>
+      <button>{name}</button>
     </>
   );
 }
