@@ -33,6 +33,7 @@ function RestTimerUI({
     <>
       <h2>this is the rest timer</h2>
       <div>this is the rest timer: {restingTime} </div>
+      <div>number of sets left: {setsTotal} </div>
     </>
   );
 }

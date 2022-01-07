@@ -1,5 +1,5 @@
 const initialState = {
-  isHangActive: false,
+  isHangActive: true,
   isRestActive: false,
   totalTime: 60,
   hangTime: 7,
