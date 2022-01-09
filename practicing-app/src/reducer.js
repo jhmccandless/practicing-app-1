@@ -1,10 +1,10 @@
 const initialState = {
-  isHangActive: false,
+  isHangActive: true,
   isRestActive: false,
   totalTime: null,
-  hangTime: 7,
+  hangTime: 1,
   downTime: 2,
-  restTime: 180,
+  restTime: 10,
   setsTotal: 3,
   repsTotal: 7,
 };
