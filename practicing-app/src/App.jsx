@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import { Provider } from "react-redux";
 import store from "./store";
 import RestTimer from "./containers/RestTimer";
@@ -15,7 +14,6 @@ function App() {
           <SetTimer />
           <HangUp />
           <RestTimer />
-          <img src={logo} className="App-logo" alt="logo" />
         </header>
       </div>
     </Provider>

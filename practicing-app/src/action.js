@@ -16,3 +16,9 @@ export function stopCircuitAction() {
     type: "STOP_CIRCUIT",
   };
 }
+
+export function countdownRepsAction() {
+  return {
+    type: "COUNTDOWN_REPS",
+  };
+}

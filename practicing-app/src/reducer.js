@@ -1,11 +1,12 @@
 const initialState = {
-  isHangActive: true,
+  isHangActive: false,
   isRestActive: false,
-  totalTime: 60,
+  totalTime: null,
   hangTime: 7,
-  downTime: 3,
+  downTime: 2,
   restTime: 180,
   setsTotal: 3,
+  repsTotal: 7,
 };
 
 function timers_reducer(state = initialState, action) {
@@ -20,7 +21,7 @@ function timers_reducer(state = initialState, action) {
         isRestActive: false,
       };
     case "RESET_HANG_TIMER":
-      let setMinus = state.setsTotal--;
+      let setsMinus = state.setsTotal--;
       return {
         ...state,
         totalTime: initialState.totalTime,
@@ -34,6 +35,12 @@ function timers_reducer(state = initialState, action) {
         ...state,
         isHangActive: false,
         isRestActive: false,
+      };
+    case "COUNTDOWN_REPS":
+      let repMinus = state.repsTotal--;
+      return {
+        ...state,
+        repsTotal: state.repsTotal--,
       };
     default:
       return state;

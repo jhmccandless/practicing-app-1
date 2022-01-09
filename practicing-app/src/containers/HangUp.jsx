@@ -6,6 +6,7 @@ function mapStateToProps(state) {
     downTime: state.downTime,
     hangTime: state.hangTime,
     isHangActive: state.isHangActive,
+    repsTotal: state.repsTotal,
   };
 }
 
