@@ -11,9 +11,9 @@ function App() {
     <Provider store={store}>
       <BrowserRouter>
         <div className="App">
-          <header className="App-header">
-            <WorkoutPageUI />
-          </header>
+          {/* <header className="App-header">
+          </header> */}
+          <WorkoutPageUI />
         </div>
       </BrowserRouter>
     </Provider>
