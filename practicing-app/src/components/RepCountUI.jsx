@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 function RepCountUI({ repsTotal, isHangActive, eachRepTimer }) {
-  console.log(isHangActive);
   const timeoutTimer = 1000 * eachRepTimer;
   const [repsCount, setRepsCount] = useState(repsTotal);
   useEffect(() => {
