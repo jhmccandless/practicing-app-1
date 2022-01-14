@@ -1,10 +1,11 @@
 import React from "react";
-import { Provider } from "react-redux";
-import store from "./store";
-import { BrowserRouter, Link, Switch, Route, Redirect } from "react-router-dom";
-
 import "./App.css";
+import store from "./store";
+import { Provider } from "react-redux";
+import { BrowserRouter, Routes, Route, Redirect } from "react-router-dom";
+
 import WorkoutPageUI from "./components/WorkoutPageUI";
+import HangUpUI from "./components/HangUpUI";
 
 function App() {
   return (
@@ -13,7 +14,12 @@ function App() {
         <div className="App">
           {/* <header className="App-header">
           </header> */}
-          <WorkoutPageUI />
+          <Routes>
+            <Route exact path="/current_workout" element={<WorkoutPageUI />} />
+            <Route path="*" element={<HangUpUI />} />
+          </Routes>
+
+          {/* <WorkoutPageUI /> */}
         </div>
       </BrowserRouter>
     </Provider>
