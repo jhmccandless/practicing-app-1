@@ -22,3 +22,10 @@ export function countdownRepsAction() {
     type: "COUNTDOWN_REPS",
   };
 }
+
+export function setWorkoutParamsAction(data) {
+  return {
+    type: "WORKOUT_PARAMS",
+    data,
+  };
+}

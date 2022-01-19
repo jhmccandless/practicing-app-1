@@ -42,6 +42,10 @@ function timers_reducer(state = initialState, action) {
         ...state,
         repsTotal: state.repsTotal--,
       };
+    case "WORKOUT_PARAMS":
+      return {
+        ...state,
+      };
     default:
       return state;
   }

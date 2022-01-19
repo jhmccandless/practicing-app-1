@@ -2,8 +2,11 @@ import React from "react";
 
 function WorkoutFormUI({}) {
   function handleSubmit(event) {
-    console.log("submioteed");
     event.preventDefault();
+    const workoutParams = [];
+    for (let i = 0; i < event.target.length; i++) {
+      workoutParams.push(event.target[i].value);
+    }
   }
 
   return (

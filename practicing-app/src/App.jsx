@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import WorkoutPageUI from "./components/WorkoutPageUI";
-import WorkoutFormUI from "./components/WorkoutForm";
+import WorkoutFormUI from "./components/WorkoutFormUI";
 
 function App() {
   return (
