@@ -12,8 +12,7 @@ function App() {
     <Provider store={store}>
       <BrowserRouter>
         <div className="App">
-          {/* <header className="App-header">
-          </header> */}
+          {/* <header className="App-header"></header> */}
           <Routes>
             <Route exact path="/current_workout" element={<WorkoutPageUI />} />
             <Route path="*" element={<WorkoutFormUI />} />
